@@ -1,0 +1,25 @@
+{
+  "name": "301-book-app-revised",
+  "version": "1.0.0",
+  "description": "Restart book app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svakam/301-book-app-revised.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svakam/301-book-app-revised/issues"
+  },
+  "homepage": "https://github.com/svakam/301-book-app-revised#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
