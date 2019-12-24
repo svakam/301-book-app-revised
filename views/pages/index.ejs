@@ -27,6 +27,8 @@
       <p class="book-summary"><%= book.summary %></p>
     </article>
     <% }) %>
+    <% } else { %>
+    <h5 id="indexcaption">You have no saved books.</h5>
     <% } %>
     <form action="/new" method="get">
       <button type="submit" name="submit">Find More Books</button>

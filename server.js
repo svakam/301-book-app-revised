@@ -40,7 +40,8 @@ let getBooksDatabaseRenderIndex = (request, response) => {
   // query the database
   client.query(sql)
     .then(results => {
-      response.render('/pages/index', { results: results.rows, });
+      console.log(results.rows);
+      response.render('pages/index', { database: results.rows, });
     })
     .catch(error => {
       console.error(error);
