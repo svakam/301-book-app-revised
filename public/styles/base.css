@@ -40,6 +40,7 @@ fieldset, label, span {
 button {
   background-color: black;
   color: white;
+  outline: none;
 }
 
 .indexh4, #indexcaption {

@@ -14,7 +14,14 @@
 </head>
 
 <body>
-  <h1>Search Results</h1>
+  <header>
+    <h1>Search Results</h1>
+    <nav>
+      <form action="/" method="get">
+        <button type="submit" class="searchnav">Bookshelf</button>
+      </form>
+    </nav>
+  </header>
   <% bookArray.forEach(book => { %>
   <article>
     <img src="<%= book.image_url%>" alt="<%= book.title %>">

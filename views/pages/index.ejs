@@ -15,10 +15,12 @@
 </head>
 
 <body>
+  <header>
+    <h1>Books Galore</h1>
+  </header>
   <main class="indexh4">
-    <h3 class="indexh4">Books Galore</h3>
     <% if (database) { %>
-    <h5 id="indexcaption">Your Saved Books</h5>
+    <h5 id="indexcaption">You have <%= bookCount %> saved books.</h5>
     <% database.forEach(book => { %>
     <article>
       <img src="<%= book.image_url%>" alt="<%= book.title %>">
@@ -27,11 +29,9 @@
       <p class="book-summary"><%= book.summary %></p>
     </article>
     <% }) %>
-    <% } else { %>
-    <h5 id="indexcaption">You have no saved books.</h5>
     <% } %>
     <form action="/new" method="get">
-      <button type="submit" name="submit">Find More Books</button>
+      <button type="submit" name="submit">Find Books</button>
     </form>
   </main>
 </body>
