@@ -1,34 +1,38 @@
 'use strict';
 
-// import express library
 const express = require('express');
-// invoke express
 const app = express();
+
+require('dotenv').config();
+const PORT = process.env.PORT || 3001;
+
+const client = require('./lib/client');
+
+// import ejs library, invoke ejs, look through views folder
+require('ejs');
+app.set('view engine', 'ejs');
+
 // public is front end
 app.use(express.static('./public'));
-
 // parses body
 app.use(express.urlencoded());
 
-// import superagent library
-const superagent = require('superagent');
-
-// import and configure .env library
-require('dotenv').config();
-
-// set port
-const PORT = process.env.PORT || 3001;
-
-// import pg library
-const pg = require('pg');
-
-// import ejs library
-require('ejs');
-// invoke ejs, look through views folder
-app.set('view engine', 'ejs');
+// js libraries
+const searchResults = require('./lib/searchresults/searchresults');
+const getBooksDatabaseRenderIndex = require('./lib/renderindex');
+const getForm = require('./lib/getform');
 
 // routes
+app.get('/', getBooksDatabaseRenderIndex); // home
+app.get('/new', getForm); // searches/new
+app.post('/searches', searchResults); // searches/show
+app.use('*', (request, response) => {
+  response.render('pages/error'); // 404 not found route
+});
 
-
-// start server
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+// if connected to database, start server
+client.connect()
+  .then(() => {
+    app.listen(PORT, () => console.log(`listening on ${PORT}`));
+  })
+  .catch(error => console.error(error));

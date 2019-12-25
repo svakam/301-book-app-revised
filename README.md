@@ -14,6 +14,7 @@
 
 ## Change Log
 - 12/24/2019 12:00pm: initialized repo, initialized database and schema
+- "/"/" 3:30pm: feature 1 complete (render index with bookshelf, move search form to new.ejs, added redirect buttons on pages
 
 ## Credits and Collaborations
 - Code Fellows curriculum
@@ -22,15 +23,15 @@
 
 ## Time estimates
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature 1, Display books and render search results, modularize functions
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2.5 hours
 
-Start time: _____
+Start time: 12:00pm
 
-Finish time: _____
+Finish time: 2:30pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3.5 hours
 
 Number and name of feature: ________________________________
 

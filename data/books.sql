@@ -10,4 +10,3 @@ CREATE TABLE booksrevised
   description TEXT,
   bookshelf VARCHAR(255)
 );
-
