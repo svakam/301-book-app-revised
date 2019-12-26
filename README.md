@@ -14,7 +14,7 @@
 
 ## Change Log
 - 12/24/2019 12:00pm: initialized repo, initialized database and schema
-- "/"/" 3:30pm: feature 1 complete (render index with bookshelf, move search form to new.ejs, added redirect buttons on pages
+- "/"/" 4:00pm: feature 1 complete (render index with bookshelf, move search form to new.ejs, added redirect buttons on pages
 
 ## Credits and Collaborations
 - Code Fellows curriculum

@@ -1,4 +1,4 @@
-article, form {
+section, form {
   animation-name: colorchange;
   animation-duration: 0.8s;
 }
