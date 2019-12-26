@@ -23,8 +23,16 @@ const getBooksDatabaseRenderIndex = require('./lib/renderindex');
 const getForm = require('./lib/getform');
 
 let viewDetails = (request, response) => {
-  console.log(request);
-  response.render('pages/books/show', { request: request, });
+  let isbn = request.params.isbn;
+  let sql = 'SELECT * FROM booksrevised WHERE isbn=$1';
+  let safeValues = [isbn];
+  client.query(sql, safeValues)
+    .then(results => {
+      if (results) {
+        response.render('pages/books/show', { bookDetail: results.rows[0], });
+      }
+    })
+    .catch(error => console.error(error));
 };
 
 // routes
